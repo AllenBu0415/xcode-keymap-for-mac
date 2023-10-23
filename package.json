@@ -1,0 +1,17 @@
+{
+  "name": "xcode-keymap-for-mac",
+  "displayName": "xcode-keymap-for-mac",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.83.0"
+  },
+  "categories": [
+    "Keymaps"
+  ],
+  "contributes": {
+    "keybindings": [
+     
+    ]
+  }
+}
