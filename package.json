@@ -3,7 +3,7 @@
   "displayName": "xcode-keymap-for-mac",
   "publisher": "XcodeKeymapForMac",
   "description": "",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.83.0"
   },
@@ -21,11 +21,6 @@
         "key": "alt+cmd+]",
         "command": "editor.action.moveLinesDownAction",
         "when": "editorTextFocus && !editorReadonly"
-      },
-      {
-        "key": "cmd+backspace",
-        "command": "editor.action.deleteLines",
-        "when": "textInputFocus && !editorReadonly"
       },
       {
         "key": "ctrl+i",
