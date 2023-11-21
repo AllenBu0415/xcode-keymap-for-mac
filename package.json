@@ -3,7 +3,7 @@
   "displayName": "xcode-keymap-for-mac",
   "publisher": "XcodeKeymapForMac",
   "description": "",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.83.0"
   },
@@ -11,22 +11,110 @@
     "Keymaps"
   ],
   "contributes": {
-    "keybindings": [
-      {
-        "key": "alt+cmd+[",
-        "command": "editor.action.moveLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-      },
-      {
-        "key": "alt+cmd+]",
-        "command": "editor.action.moveLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-      },
-      {
-        "key": "ctrl+i",
-        "command": "editor.action.formatSelection",
-        "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
-      }
+    "keybindings": 
+    [
+        {
+            "key": "alt+cmd+[BracketLeft]",
+            "command": "editor.action.moveLinesUpAction",
+            "when": "editorTextFocus && !editorReadonly"
+        },
+        {
+            "key": "alt+up",
+            "command": "-editor.action.moveLinesUpAction",
+            "when": "editorTextFocus && !editorReadonly"
+        },
+        {
+            "key": "alt+cmd+[BracketRight]",
+            "command": "editor.action.moveLinesDownAction",
+            "when": "editorTextFocus && !editorReadonly"
+        },
+        {
+            "key": "alt+down",
+            "command": "-editor.action.moveLinesDownAction",
+            "when": "editorTextFocus && !editorReadonly"
+        },
+        {
+            "key": "ctrl+i",
+            "command": "editor.action.formatSelection",
+            "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
+        },
+        {
+            "key": "cmd+k cmd+f",
+            "command": "-editor.action.formatSelection",
+            "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
+        },
+        {
+            "key": "ctrl+cmd+e",
+            "command": "editor.action.rename",
+            "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+        },
+        {
+            "key": "f2",
+            "command": "-editor.action.rename",
+            "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+        },
+        {
+            "key": "ctrl+alt+e",
+            "command": "editor.action.nextSelectionMatchFindAction",
+            "when": "editorFocus"
+        },
+        {
+            "key": "cmd+f3",
+            "command": "-editor.action.nextSelectionMatchFindAction",
+            "when": "editorFocus"
+        },
+        {
+            "key": "ctrl+shift+alt+e",
+            "command": "editor.action.previousSelectionMatchFindAction",
+            "when": "editorFocus"
+        },
+        {
+            "key": "shift+cmd+f3",
+            "command": "-editor.action.previousSelectionMatchFindAction",
+            "when": "editorFocus"
+        },
+        {
+            "key": "ctrl+shift+up",
+            "command": "editor.action.insertCursorAbove",
+            "when": "editorTextFocus"
+        },
+        {
+            "key": "alt+cmd+up",
+            "command": "-editor.action.insertCursorAbove",
+            "when": "editorTextFocus"
+        },
+        {
+            "key": "ctrl+shift+down",
+            "command": "editor.action.insertCursorBelow",
+            "when": "editorTextFocus"
+        },
+        {
+            "key": "alt+cmd+down",
+            "command": "-editor.action.insertCursorBelow",
+            "when": "editorTextFocus"
+        },
+        {
+            "key": "alt+cmd+l",
+            "command": "editor.action.transpose"
+        },
+        {
+            "key": "cmd+l",
+            "command": "workbench.action.gotoLine"
+        },
+        {
+            "key": "ctrl+g",
+            "command": "-workbench.action.gotoLine"
+        },
+        {
+            "key": "cmd+d",
+            "command": "editor.action.copyLinesDownAction",
+            "when": "editorTextFocus && !editorReadonly"
+        },
+        {
+            "key": "shift+alt+down",
+            "command": "-editor.action.copyLinesDownAction",
+            "when": "editorTextFocus && !editorReadonly"
+        }
     ]
   }
 }
