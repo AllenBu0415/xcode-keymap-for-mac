@@ -3,7 +3,7 @@
   "displayName": "xcode-keymap-for-mac",
   "publisher": "XcodeKeymapForMac",
   "description": "",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "engines": {
     "vscode": "^1.83.0"
   },
