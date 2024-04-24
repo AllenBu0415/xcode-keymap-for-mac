@@ -113,7 +113,7 @@
         "when": "editorTextFocus && !editorReadonly"
       },
       {
-        "key": "alt+cmd+left",
+        "key": "alt+cmd+right",
         "command": "editor.unfold",
         "when": "editorTextFocus && foldingEnabled"
       },
@@ -123,7 +123,7 @@
         "when": "editorTextFocus && foldingEnabled"
       },
       {
-        "key": "alt+cmd+right",
+        "key": "alt+cmd+left",
         "command": "editor.fold",
         "when": "editorTextFocus && foldingEnabled"
       },
