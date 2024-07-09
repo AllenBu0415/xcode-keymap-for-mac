@@ -3,13 +3,16 @@
   "displayName": "xcode-keymap-for-mac",
   "publisher": "XcodeKeymapForMac",
   "description": "",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "engines": {
     "vscode": "^1.83.0"
   },
-  "categories": ["Keymaps"],
+  "categories": [
+    "Keymaps"
+  ],
   "contributes": {
     "keybindings": [
+      // 向上移动
       {
         "key": "alt+cmd+[BracketLeft]",
         "command": "editor.action.moveLinesUpAction",
@@ -20,6 +23,7 @@
         "command": "-editor.action.moveLinesUpAction",
         "when": "editorTextFocus && !editorReadonly"
       },
+      // 向下移动
       {
         "key": "alt+cmd+[BracketRight]",
         "command": "editor.action.moveLinesDownAction",
@@ -30,6 +34,7 @@
         "command": "-editor.action.moveLinesDownAction",
         "when": "editorTextFocus && !editorReadonly"
       },
+      // 重排格式
       {
         "key": "ctrl+i",
         "command": "editor.action.formatSelection",
@@ -40,6 +45,7 @@
         "command": "-editor.action.formatSelection",
         "when": "editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
       },
+      // 重命名
       {
         "key": "ctrl+cmd+e",
         "command": "editor.action.rename",
@@ -50,50 +56,7 @@
         "command": "-editor.action.rename",
         "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
       },
-      {
-        "key": "ctrl+alt+e",
-        "command": "editor.action.nextSelectionMatchFindAction",
-        "when": "editorFocus"
-      },
-      {
-        "key": "cmd+f3",
-        "command": "-editor.action.nextSelectionMatchFindAction",
-        "when": "editorFocus"
-      },
-      {
-        "key": "ctrl+shift+alt+e",
-        "command": "editor.action.previousSelectionMatchFindAction",
-        "when": "editorFocus"
-      },
-      {
-        "key": "shift+cmd+f3",
-        "command": "-editor.action.previousSelectionMatchFindAction",
-        "when": "editorFocus"
-      },
-      {
-        "key": "ctrl+shift+up",
-        "command": "editor.action.insertCursorAbove",
-        "when": "editorTextFocus"
-      },
-      {
-        "key": "alt+cmd+up",
-        "command": "-editor.action.insertCursorAbove",
-        "when": "editorTextFocus"
-      },
-      {
-        "key": "ctrl+shift+down",
-        "command": "editor.action.insertCursorBelow",
-        "when": "editorTextFocus"
-      },
-      {
-        "key": "alt+cmd+down",
-        "command": "-editor.action.insertCursorBelow",
-        "when": "editorTextFocus"
-      },
-      {
-        "key": "alt+cmd+l",
-        "command": "editor.action.transpose"
-      },
+      // 快速前往行
       {
         "key": "cmd+l",
         "command": "workbench.action.gotoLine"
@@ -102,6 +65,7 @@
         "key": "ctrl+g",
         "command": "-workbench.action.gotoLine"
       },
+      // 向下复制一行
       {
         "key": "cmd+d",
         "command": "editor.action.copyLinesDownAction",
@@ -112,6 +76,7 @@
         "command": "-editor.action.copyLinesDownAction",
         "when": "editorTextFocus && !editorReadonly"
       },
+      // 展开代码块
       {
         "key": "alt+cmd+right",
         "command": "editor.unfold",
@@ -122,6 +87,7 @@
         "command": "-editor.unfold",
         "when": "editorTextFocus && foldingEnabled"
       },
+      // 折叠代码块
       {
         "key": "alt+cmd+left",
         "command": "editor.fold",
@@ -131,6 +97,17 @@
         "key": "alt+cmd+[BracketLeft]",
         "command": "-editor.fold",
         "when": "editorTextFocus && foldingEnabled"
+      },
+      // esc修复
+      {
+        "key": "escape",
+        "command": "editor.action.quickFix",
+        "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
+      },
+      {
+        "key": "cmd+.",
+        "command": "-editor.action.quickFix",
+        "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
       }
     ]
   }
